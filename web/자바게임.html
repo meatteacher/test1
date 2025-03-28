@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table {
+            width: 800px;
+            height: 800px;
+            border: 1px solid;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .pan {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+
+        .brown {
+            background: brown !important;
+        }
+
+        .white {
+            background: burlywood !important;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="table">
+        </div>
+    </div>
+<script>
+
+let table = document.getElementsByClassName('table')[0]
+let bg_color = ["brown","white"];
+let gb_color = ["white","brown"];
+
+for(let i = 0; i<8; i++){
+        table.innerHTML += `<div class="pan ${bg_color[i%2]}"></div> `
+    }
+for(let i = 0; i<8; i++){
+        table.innerHTML += `<div class="pan ${gb_color[(i%2)]}"></div> `
+}
+for(let i = 0; i<8; i++){
+        table.innerHTML += `<div class="pan ${bg_color[i%2]}"></div> `
+    }
+for(let i = 0; i<8; i++){
+        table.innerHTML += `<div class="pan ${gb_color[(i%2)]}"></div> `
+}
+for(let i = 0; i<8; i++){
+        table.innerHTML += `<div class="pan ${bg_color[i%2]}"></div> `
+    }
+for(let i = 0; i<8; i++){
+        table.innerHTML += `<div class="pan ${gb_color[(i%2)]}"></div> `
+}
+for(let i = 0; i<8; i++){
+        table.innerHTML += `<div class="pan ${bg_color[i%2]}"></div> `
+    }
+for(let i = 0; i<8; i++){
+        table.innerHTML += `<div class="pan ${gb_color[(i%2)]}"></div> `
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    - 속성 -
+    *1) placeholder: 필드에 힌트표시
+                    password 에서도 글씨로 표시됨
+                    (한 글자라도 넣으면 힌트 사라짐)
+                    (value 와는 다름. value는 기존 글자들이 다 살아있음)
+
+    *2) autofocus: 자동으로 커서 표시
+                  (여러 요소에 들어가면 코드상 제일 위에 있는 요소에 포커스 됨)
+    
+    3) readonly: 해당 필드을 읽기전용 으로 표시
+                 (해당 필드 수정 불가)
+                 form으로 값을 보낼때 전송 됨
+        
+    4) disabled: 해당 필드를 비활성화
+                 (해당 필드 수정 불가)
+                 form으로 값을 보낼때 전송 안됨
+
+    5) required: form 태그 안에서 필수 요소로 지정
+                (빈칸 불가)
+
+    6) maxlength: 해당 필드의 최대 글자 수 지정
+                    단위 - 정수
+    7) minlength: 해당 필드의 최소 글자 수 지정
+                    단위 - 정수
+                    form 태그 안에서만 동작(submit 버튼 클릭시 글자수 체크함)
+    
+    *8) checked: radio, checkbox 용도의 속성
+--> 
+    <input type="text" placeholder="아이디를 입력하시오" autofocus> <br>
+    <input type="text" value="아이디를 입력하시오" autofocus> <br>
+    <input type="password" placeholder="비번을 입력하시오" autofocus> <br>
+    
+    <input type="text" value="홍길동" readonly> <br>
+    <input type="text" value="홍길동" disabled> <br>
+
+    <form action="#">
+        <input type="text" required> <br>
+        <input type="text" maxlength="8" minlength="4"> <br>
+        <input type="submit">
+    </form>
+
+    <input type="radio" value="예" name="rd" checked>예 
+    <input type="radio" value="아니오" name="rd">아니오 <br>
+    
+    <input type="checkbox" value="웹1" name="chk" checked>웹1
+    <input type="checkbox" value="웹2" name="chk">웹2
+    <input type="checkbox" value="웹3" name="chk">웹3 <br>
+    
+</body>
+</html>

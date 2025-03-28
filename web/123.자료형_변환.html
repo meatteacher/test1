@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <script>
+        /* -자료형 확인: typeof(확인할 자료) */
+        console.log("AAA")
+        console.log(typeof("AAA"))
+
+        console.log("AAA" + " " + typeof("AAA"))
+        console.log("AAA" , typeof("AAA"))
+
+        console.log(100 + 100)
+        console.log(100 , 100)
+
+
+        /*
+
+            - 자료형 변환
+                우선순위: 문자 > 숫자 > boolean
+                         (다른 형태끼리의 자료가 만났을때의 결과)
+
+                1) 다른 자료형끼리의 결합
+                2) 내장함수 사용
+                    Number(), String()
+
+                    *Number()을 간단하게 대체하는 방법: +
+
+        */
+        //  1번 방법
+
+        console.log(100 + "100")
+        console.log(100 + 100 + "100") //200100
+        console.log("100" + 100 + 100) //100100100
+
+        console.log("100" + (100 + 100)) //100200
+        console.log(("100" + 100) + 100) //100100100
+        console.log(100 + "100" + 100) //100100100
+
+        console.log("" + 100 + 100) //100100
+
+        // 2번 방법
+
+        console.log(typeof( String(100))) // 100=> "100"
+        console.log(typeof( Number("100"))) // "100"=> 100
+        console.log(typeof( Number("a"))) // "a"=> a
+
+        console.log(Number("100" + "100")) // 숫자형 100100
+        console.log(Number("100") + Number("100")) // 200
+        /* 괄호 안의 연산자를 우선적으로 처리하니 위에는 숫자형 100100으로 뜬다*/
+
+        //Number()을 간단하게 대체하는 방법: +
+
+        console.log(Number("100" + "100"))
+        console.log(+("100" + "100")) //위와 아래가 숫자형 200으로 나옴
+        
+        console.log(100+100+100+"") //문자형 300
+
+    </script>
+</body>
+</html>

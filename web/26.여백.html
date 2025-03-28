@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        = 여백 =
+        
+        단위 - px, %
+            *여백 값은 상속 안됨
+        
+        여백 
+            1) margin: 요소의 바깥쪽 영역 여백
+                margin-top
+                margin-right
+                margin-bottom
+                margin-left
+
+                *한방
+                    margin: 전체 (값 하나만 주면 사방에 다 들어감)
+                    margin: 1 2 3 4(값 4군데 다 주는 경우 1,2,3,4 순서대로 적용)
+                    margin: 1 2 4 3(값 3군데 주는 경우 1,2,3,2 순서대로 적용)
+                    margin: 13 24 (값 2군데 주는 경우 첫번째 값은 1,3번 자리, 두번째값은 2,4번 적용)
+
+                *block레벨 요소 가운데 정렬 하는 방법
+                    margin: 0 auto;
+                    margin: auto;
+            
+            2) padding:요소의 안쪽 영역 여백
+                padding-top
+                padding-right
+                padding-bottom
+                padding-left
+
+                *한방
+                    padding: 전체 (값 하나만 주면 사방에 다 들어감)
+                    padding: 1 2 3 4(값 4군데 다 주는 경우 1,2,3,4 순서대로 적용)
+                    padding: 1 2 4 3(값 3군데 주는 경우 1,2,3,2 순서대로 적용)
+                    padding: 13 24 (값 2군데 주는 경우 첫번째 값은 1,3번 자리, 두번째값은 2,4번 적용)
+                * 사이즈를 정해놓은 상태에서 padding이 들어가면 뚱뚱해짐(내장지방)
+                    box-sizing: border-box; (뚱뚱이 방지, padding/border를 다 가지고 들어옴)
+
+        */
+
+        body { margin: 0}
+        #outer1 {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+
+            margin: 10px 50px;
+        }
+
+        #outer2 {
+            background-color: #ddd;
+
+            padding: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="outer" id="outer1">
+        <div class="inner"> box1</div>
+    </div>
+    <div class="outer" id="outer2">
+        <div class="inner"> box2</div>
+    </div>
+</body>
+</html>

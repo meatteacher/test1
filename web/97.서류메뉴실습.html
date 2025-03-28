@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background: #ddd;
+            font-size: 15px;
+        }
+
+        #wrap {
+            margin: 40px auto;
+            width: 750px;
+        }
+
+        #wrap > * {
+            transition: all 0.3s 0.3s;
+        }
+
+        .btn_box {
+            width: 480px;
+            height: 40px;
+
+            display: flex;
+            overflow: hidden;
+        }
+        label {
+            display: block;
+            width: calc(100% / 4);
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            color: #385c5b;
+            font-weight: 900;
+            text-shadow: rgba(255,255,255, 0.3);
+            background-image: linear-gradient(#5ba4a4, #4e8c8a);
+            box-shadow: -1px 0 0 0 #a2a2a2;
+        }
+
+        label:hover {
+            background-image: linear-gradient(#4e8c8a,#5ba4a4);
+            cursor: pointer;
+        }
+
+        #rd1:checked ~ .btn_box > label:nth-child(1) {background: #fff;}
+        #rd2:checked ~ .btn_box > label:nth-child(2) {background: #fff;}
+        #rd3:checked ~ .btn_box > label:nth-child(3) {background: #fff;}
+        #rd4:checked ~ .btn_box > label:nth-child(4) {background: #fff;}
+        
+        .pan_box {
+            width: 100%;
+            height: 400px;
+            background: skyblue;
+        }
+        .pan {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .text_box {
+            background-color: #fff;
+            padding: 10px 40px;
+            opacity: 1;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        .mini_title {
+            font-size: 16px;
+            font-weight: 900;
+            margin: 10px 0 0 0;
+        }
+
+        .txt {
+            border-left: 4px solid #4e8c8a ;
+            padding-left: 10px;
+        }
+
+        .ABOUT ,
+        .SERVICE ,
+        .WORK ,
+        .CONTACT { background: #fff;}
+
+        #rd1:checked ~ .pan_box > .ABOUT {display: block;}
+        #rd2:checked ~ .pan_box > .SERVICE {display: block;}
+        #rd3:checked ~ .pan_box > .WORK {display: block;}
+        #rd4:checked ~ .pan_box > .CONTACT {display: block;}
+
+        #rd1:checked ~ .ABOUT > .text_box {opacity: 1;}
+        #rd2:checked ~ .SERVICE > .text_box {opacity: 1;}
+        #rd3:checked ~ .WORK > .text_box {opacity: 1;}
+        #rd4:checked ~ .CONTACT > .text_box {opacity: 1;}
+
+        input[name="rd"] { display: none;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="radio" id="rd1" name="rd">
+        <input type="radio" id="rd2" name="rd">
+        <input type="radio" id="rd3" name="rd">
+        <input type="radio" id="rd4" name="rd">
+
+        <div class="btn_box">
+            <label for="rd1">ABOUT</label>
+            <label for="rd2">SERVICE</label>
+            <label for="rd3">WORK</label>
+            <label for="rd4">CONTACT</label>
+        </div>
+        <div class="pan_box">
+            <div class="pan ABOUT">
+                <div class="text_box">
+                    <div class="title">
+                        About
+                    </div>
+                    <div class="txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam alias eius aut, dicta rem veniam ea, reprehenderit consequuntur exercitationem deleniti doloremque voluptatibus, nobis natus ex quasi nihil molestias tempore quibusdam!
+                    </div>
+                    <div class="mini_title">
+                        Thanks
+                    </div>
+                    <div class="txt">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit nam nostrum, recusandae a incidunt ut porro, quos eveniet sequi amet, fuga quia neque voluptatibus distinctio eligendi odit. Expedita, deserunt cumque.
+                    </div>
+                </div>
+            </div>
+            <div class="pan SERVICE">
+                <div class="text_box">
+                    <div class="title">
+                        Service
+                    </div>
+                    <div class="txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam alias eius aut, dicta rem veniam ea, reprehenderit consequuntur exercitationem deleniti doloremque voluptatibus, nobis natus ex quasi nihil molestias tempore quibusdam!
+                    </div>
+                    <div class="mini_title">
+                        HOW?
+                    </div>
+                    <div class="txt">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit nam nostrum, recusandae a incidunt ut porro, quos eveniet sequi amet, fuga quia neque voluptatibus distinctio eligendi odit. Expedita, deserunt cumque.
+                    </div>
+                </div>
+            </div>
+            <div class="pan WORK">
+                <div class="text_box">
+                    <div class="title">
+                        Work
+                    </div>
+                    <div class="txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam alias eius aut, dicta rem veniam ea, reprehenderit consequuntur exercitationem deleniti doloremque voluptatibus, nobis natus ex quasi nihil molestias tempore quibusdam!
+                    </div>
+                    <div class="mini_title">
+                        LIVING
+                    </div>
+                    <div class="txt">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit nam nostrum, recusandae a incidunt ut porro, quos eveniet sequi amet, fuga quia neque voluptatibus distinctio eligendi odit. Expedita, deserunt cumque.
+                    </div>
+                </div>
+            </div>
+            <div class="pan CONTACT">
+                <div class="text_box">
+                    <div class="title">
+                        Contact
+                    </div>
+                    <div class="txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam alias eius aut, dicta rem veniam ea, reprehenderit consequuntur exercitationem deleniti doloremque voluptatibus, nobis natus ex quasi nihil molestias tempore quibusdam!
+                    </div>
+                    <div class="mini_title">
+                        ADRESS
+                    </div>
+                    <div class="txt">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit nam nostrum, recusandae a incidunt ut porro, quos eveniet sequi amet, fuga quia neque voluptatibus distinctio eligendi odit. Expedita, deserunt cumque.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

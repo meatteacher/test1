@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {margin: 0;}
+        /* 기본 사항 */
+        .menu {
+            width: calc((100% - 60px)/6);
+            height: 100px;
+            border: 1px solid;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 100px;
+            margin-right: 10px;
+            background: yellow;
+            
+        }
+        
+        .box {
+            width: 100%;
+            height: 400px;
+
+            background: skyblue;
+        }
+
+        .tmp {
+            width: 100%;
+            height: 100px;
+        }
+
+        /*
+             1. ul 점빼기
+             2. ul 여백빼기
+             3. li사이즈 (1/n)
+             4. li테두리
+             5. li옆으로 나열(float)
+             6. ul의 높이 잡기(직접주기/overflow/clearfix)
+             7. 글씨 가운데 정렬
+        */
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="tmp">
+            <div class="menu menu1">menu1</div>
+            <div class="menu menu2">menu2</div>
+            <div class="menu menu3">menu3</div>
+            <div class="menu menu4">menu4</div>
+            <div class="menu menu5">menu5</div>
+            <div class="menu menu6">menu6</div>
+        </div>
+    </div>
+
+    <div class="box"></div>
+</body>
+</html>

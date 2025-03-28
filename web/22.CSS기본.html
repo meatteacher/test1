@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- CSS: HTML 요소의  style(디자인)을 주는 것
+              *상위요소는 건드릴 수 없다.
+
+              **스타일 정보는 웹문서가 브라우저에 렌더링 되기 전에 미리 정해져 있어야하기 떄문에 보통 body가 읽히기 전인 head에 명시한다
+              css의 주석 : /* 내용 */
+
+            - 스타일 시트 종류 -
+                1) 내부 스타일 시트: 해당 문서의 head 안에 style 태그로 정의
+                **2) 외부 스타일 시트: 해당 문서의 head 밖에 별도의 css 파일을 만들어서 정의
+                                     <link rel="stylesheet" href="외부css">
+                                     장점 - 하나의 css파일로 여러 html파일 수정 가능
+            - 선택자 -
+                선택자 {
+                속성: 속성값;
+                속성: 속성값;
+                속성: 속성값                
+                }
+
+            **선택자 우선 순위
+                1) 아이디 - # 
+                2) 클래스 - .
+                    * 같은 우선 순위끼리 경쟁이 붙으면 코드상 나중에 읽힌 선택자꺼가 동작함
+                3) 태그 - 태그명
+                -------------
+                *우선순위에는 포함되지 않지만 0순위처럼 적용되는거
+                    인라인 방식: 요소 내부의 style 속성에 css 넣기
+
+                *우선순위 무시
+                    !important: 우선순위 뿐만 아니라 JS와 인라인보다도 최우선으로 적용
+                                css의 특정 속성에 붙여줌
+
+
+    -->
+
+    <style>
+
+        /* h1 { background: blue;} */
+
+
+
+
+    </style>
+<!-- 같은 레벨에 있는 css 폴더 안의 22.temp.css 파일 연결 -->
+    <link rel="stylesheet" href="./css/22.temp.css">
+
+</head>
+<body>
+    <!-- <h1>헬로월드</h1> -->
+
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+
+</body>
+</html>

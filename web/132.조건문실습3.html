@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        성적표
+            학생 이름, 국영수 점수를 받아서 총점, 평균, 평점 출력하는 프로그램 짜기
+
+            90점 이상 A, 80점 이상 B, 70점 이상 C, 60점 이상 D, 그 이하는 F 
+
+            -XXX님의 총점: XX점, 평균: XX점, 평점: X입니다.
+        
+        */
+
+        let name = prompt("이름");
+        let kor = +prompt("국어");
+        let eng = +prompt("영어");
+        let mat = +prompt("수학");
+
+        let total = kor + eng + mat;
+        let avg = (total / 3).toFixed(2);//toFixed(소수점자리수)
+
+        let rank
+        if(avg >= 90 && avg <= 100) {
+            rank = "A"
+        }
+        else if (avg >= 80) {
+            rank = "B"
+        }
+        else if (avg >= 70) {
+            rank = "C"
+        }
+        else if (avg >= 60) {
+            rank = "D"
+        }
+        else {
+            rank = "F"
+        }
+
+        
+        console.log(name,"님의 총점:", total,"점, 평균:" , avg,"점, 평점:", rank, "입니다.")
+        document.write(name,"님의 총점:", total,"점, 평균:" , avg,"점, 평점:", rank, "입니다.")
+
+
+    </script>
+</body>
+</html>

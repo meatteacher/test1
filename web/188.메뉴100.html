@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { margin: 0;}
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+
+        .header {
+            width: 100%;
+            border-bottom: 3px solid red;
+        }
+        .h_top {
+            width: 100%;
+            height: 100px;
+            background-color: skyblue;
+        }
+        .h_bot {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background-color: orange;
+            position: relative;
+        }
+        .h_bot_active {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .wrap_active {
+            padding-top: 50px;
+        }
+
+
+        .nav {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            background-color: aquamarine;
+        }
+        .nav > li {
+            width: calc(100% / 5);
+            text-align: center;
+        }
+        .sec {
+            width: 100%;
+            height: 100vh;
+            border: 5px solid red;
+            box-sizing: border-box;
+            font-size: 100px;
+        }
+        .footer {
+            height: 400px;
+            background-color: #333;
+        }
+
+        .top_banner {
+            background: salmon;
+        }
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            height: 50px;
+            margin: 0 auto;
+
+            position: relative;
+        }
+        .btn_bn_close { 
+            width: 50px;
+            height: 50px;
+            background: #000;
+            color: #fff;
+            font-weight: 900;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub_menu {
+            background: slateblue;
+
+            height: 0;
+            overflow: hidden;
+            transition: all 0.5s;
+
+            position: relative;
+            z-index: 999999999;
+        }
+        .nav:hover .sub_menu {
+            height: 200px; 
+        }
+
+        .pan100 {
+            width: 100%;
+            height: 0;
+
+            position: absolute;
+            left: 0;
+            top: 100%;
+            transition: all 0.5s;
+            background: slateblue;
+        }
+        /* .nav:hover ~ .pan100 {
+            height: 200px;
+        } */
+
+
+        @media screen and (max-width: 768px) {
+            .h_top {
+                height: 60px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .h_top {
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="top_banner">
+        <div class="container">
+            <div class="btn_bn_close">X</div>
+        </div>
+    </div>
+
+
+    <header class="header">
+        <div class="h_top"></div>
+        <div class="h_bot">
+            <ul class="nav">
+                <li>menu1
+                    <ul class="sub_menu">
+                        <li>sub1</li>
+                        <li>sub2</li>
+                    </ul>
+                </li>
+                <li>menu2
+                    <ul class="sub_menu">
+                        <li>sub1</li>
+                        <li>sub2</li>
+                        <li>sub3</li>
+                        <li>sub4</li>
+                    </ul>
+                </li>
+                <li>menu3
+                    <ul class="sub_menu">
+                        <li>sub1</li>
+                        <li>sub2</li>
+                        <li>sub3</li>
+                    </ul>
+                </li>
+                <li>menu4
+                    <ul class="sub_menu">
+                        <li>sub1</li>
+                        <li>sub2</li>
+                        <li>sub3</li>
+                    </ul>
+                </li>
+                <li>menu5
+                    <ul class="sub_menu">
+                        <li>sub1</li>
+                        <li>sub2</li>
+                        <li>sub3</li> 
+                    </ul>
+                </li> 
+            </ul>
+            <div class="pan100"></div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="sec" id="sec1">sec1</div>
+        <div class="sec" id="sec2">sec2</div>
+        <div class="sec" id="sec3">sec3</div>
+    </main>
+    <footer class="footer"></footer>
+</div>
+
+
+<script> 
+//
+    let menuQty = 0;
+    let sub_menu = document.getElementsByClassName('sub_menu')
+    let ttt = sub_menu[0].children[0].getBoundingClientRect().height
+    /* sub_menu 각각 0번방 부터 끝방까지 돌아다니면서 
+        그 자식들의 개수를 구해서
+        menuQty와 비교해서 그것보다 크면 덮어쓰기
+    */
+    for(let i=0; i<sub_menu.length; i++) {
+        // console.log(`${i}: ${sub_menu[i].children.length}`)
+        if(menuQty < sub_menu[i].children.length) {
+            menuQty = sub_menu[i].children.length
+        }
+
+        console.log(sub_menu[i].children[0].getBoundingClientRect().height)
+    }
+    console.log("menuQty: " + menuQty)
+    console.log(menuQty * ttt)
+    let pan_h_size = menuQty * ttt;
+
+
+    let nav = document.getElementsByClassName('nav')[0]
+    let pan = document.getElementsByClassName('pan100')[0]
+    nav.addEventListener('mouseenter', function(){
+        pan.style.height = pan_h_size+"px";
+    })
+    nav.addEventListener('mouseleave', function(){
+        pan.style.height = 0+"px";
+    })
+
+    
+    pan.addEventListener('mouseenter', function(){
+        pan.style.height = pan_h_size+"px";
+    })
+    pan.addEventListener('mouseleave', function(){
+        pan.style.height = 0+"px";
+    })
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////
+    let wrap = document.getElementById('wrap')
+    let h_bot = document.getElementsByClassName('h_bot')[0];
+    let h_bot_o_top = h_bot.offsetTop;
+    let chk = true;
+    document.addEventListener('scroll', function(){
+        let scrollY = window.scrollY;
+        // console.log(scrollY, h_bot_o_top)
+
+        if(chk && scrollY > h_bot_o_top) {
+            wrap.classList.add('wrap_active')
+            h_bot.classList.add('h_bot_active')
+            chk = false;
+        }
+        else if(!chk && scrollY <= h_bot_o_top) {
+            wrap.classList.remove('wrap_active')
+            h_bot.classList.remove('h_bot_active')
+            chk = true
+        } 
+    })
+
+    let btn_bn_close = document.getElementsByClassName('btn_bn_close')[0];
+    let top_banner = document.getElementsByClassName('top_banner')[0];
+
+    btn_bn_close.addEventListener('click', function(){
+        top_banner.style.display = "none"
+        h_bot_o_top = h_bot.offsetTop;
+    })
+
+    // console.log(window.innerWidth);
+
+
+    /* 리사이즈 - 브라우저의 크기가 바뀔때마다 동작
+                *주의: document에 주는게 아니고 window에 줘야함 
+                */
+    window.addEventListener('resize', function(){
+        if(window.innerWidth <= 768) {
+            h_bot_o_top = h_bot.offsetTop;
+        }
+    })
+
+    
+</script>
+</body>
+</html>

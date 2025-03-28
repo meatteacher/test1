@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {margin: 0; background: #ddd;}
+        .outer {
+            height: 300px;
+            width: 300px;
+            perspective: 400px;
+            margin: 100px auto;
+        }
+
+        .red {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+
+            transform-style: preserve-3d;
+            transition-duration: 5s;
+            
+            position: relative;
+            background: red ;
+        }
+
+        .blue {
+            width: 150px;
+            height: 150px;
+            background: rgb(255, 255, 255, 0.5) ;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) translateZ(100px);
+        }
+
+        .green {
+            width: 150px;
+            height: 150px;
+            background: rgb(255, 255, 255, 0.5);
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) translateZ(-100px);
+        }
+
+        .pi1 {
+            width: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .pi2 {
+            width: 150px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .outer:hover > .red {
+            transform: rotateY(360deg);
+        }
+
+        .outer:hover > .green {
+            transform: rotateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="red">
+            <img src="./img/pikachu/pikachu01.png" class="pi1">
+            <div class="blue">
+                <img src="./img/pikachu/pikachu02.png" class="pi2">
+            </div>
+            <div class="green">
+                <img src="./img/pikachu/pikachu03.png" class="pi2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

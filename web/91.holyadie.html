@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {margin: 0;}
+
+        #wrap {
+            width: 640px;
+            height: 425px;
+            position: relative;
+        }
+
+        h1 {
+            position: absolute;
+            top: 160px;
+            left: 210px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        #wrap:hover h1 {
+            top: 130px;
+            color: white;
+        }
+
+
+        .txt1 {
+            position: absolute;
+            bottom: 0px;
+            left: 190px;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        #wrap:hover .txt1 {
+            bottom: 30px;
+            opacity: 1;
+            color: white;
+        }
+
+        .black_box {
+            width: 100%;
+            height: 0;
+            transition: all 0.3s;
+            position: absolute;
+            bottom: 0;
+        }
+
+        #wrap:hover .black_box {
+
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.385);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <img src="./img/트랜지션/heart.jpg" alt="heart" class="heart">
+        <div class="black_box"></div>
+        <div class="txt">
+            <h1>Holy Sadie</h1>
+            <div class="txt1">
+                어쩌고저쩌고블라블라블라
+                <br>
+                She had a dark soul.
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

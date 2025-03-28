@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="시작" onclick="start()">
+    <input type="button" value="멈춤" onclick="stop()">
+
+<script>
+    /*
+        setInterval - 일정시간마다 한번씩 동작하는 함수
+
+        setInterval(function() {
+            실행할 코드
+        }, 밀리초);
+        (*밀리초 마다 한번씩 실행)
+        
+        clearInterval(멈출 인터벌)
+    */
+
+    let interval="";
+    let count = 0;
+    function start() {
+        // clearInterval(interval)
+        stop()
+
+        interval = setInterval(function() {
+            console.log(count++)
+        }, 3000);
+    }
+
+    function stop() {
+        clearInterval(interval)
+    }
+</script>
+</body>
+</html>

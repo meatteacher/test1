@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    onkeydown
+    <input type="text" id="keydown" onkeydown="keyDown()">
+    
+    <hr>
+
+    onkeyup
+    <input type="text" id="keyup" onkeyup="keyUp()">
+
+    <hr>
+
+    tmp
+    <input type="text" id="tmp" onkeyup="keyUp()" onkeydown="keyDown()">
+
+
+<script>
+/*
+    각 input에 글자 넣을때마다 글자수 체크
+    *주의 사항: onkeydown과 onkeyup일때의 체크되는 글자수 확인
+*/
+
+    function keyDown() {
+        //console.log("down :"+document.getElementById('tmp').value)
+        console.log(document.getElementById('keydown').value.length)
+    }
+
+    function keyUp() {
+        //console.log("up :"+document.getElementById('tmp').value)
+        console.log(document.getElementById('keyup').value.length)
+    }
+
+    function tmp() {
+        console.log(document.getElementById('keyup').value.length)
+    }
+
+
+</script>
+</body>
+</html>

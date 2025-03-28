@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* input[type="checkbox"] {
+    appearance: none;
+    box-sizing: border-box;
+    background-clip: content-box;
+    padding: 0.25em;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked{
+    border-color: red;
+    background-color: red;
+}
+
+.box {
+    display: flex;
+} */
+
+    #wrap {
+        display: flex;
+        gap: 10px;
+    }
+    .box {
+        width: 20px;
+        height: 20px;
+        border: 1px solid;
+        border-radius: 5px;
+
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+
+        position: relative;
+
+        display: inline-block;
+    }
+
+    .innerbox {
+        /* width: 10px;
+        height: 10px; */
+        background: red;
+        border-radius: 3px;
+
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+
+        display: none;
+    }
+
+    label {
+        display: flex;
+    }
+    
+    input {
+        display: none;
+    }
+
+    /* #rd1:checked + label .innerbox,
+    #rd2:checked + label .innerbox */
+    input[name="rd"]:checked + label .innerbox
+    {
+        display: block;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="radio" name="rd" id="rd1">
+        <label for="rd1">
+            <div class="box">
+                <div class="innerbox"></div>
+            </div>
+            최근만화
+        </label>
+
+        <input type="radio" name="rd" id="rd2">
+        <label for="rd2">
+            <div class="box">
+                <div class="innerbox"></div>
+            </div>
+            인기만화
+        </label>
+    </div>
+    <!-- <div class="box">
+        <input type="radio" class="chk last" name="rd">
+        <span>최근만화</span>
+        <input type="radio" class="chk best" name="rd">
+        <span>인기만화</span>
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    /* 
+    
+        1) white-space: 공백처리
+                        normal: 기본값
+                        *nowrap: 여러개의 공백을 한칸으로 표시
+                                영역을 넘치더라도 줄바꿈 없이 한줄로 표시
+                        pre: 공백을 그대로 표시
+                             영역을 넘치더라도 줄바꿈 없이 한줄로 표시
+                        pre-line: 공백은 한칸으로 표시, 엔터값은 그래도 표시
+                                영역을 넘어가는 경우 자동 줄바꿈
+                        pre-wrap: 공백을 그대로 표시(엔터도 그대로 표시)
+                                영역을 넘어가는 경우 자동 줄바꿈
+
+        2) letter-spacing: 글자 하나하나 간격 조정
+                            px
+        3) word-spacing: 단어 하나하나 간격 조정
+                            px
+        4) word-break: 글자 하나하나씩 분리
+                        break-all:
+                        normal/keep-all;
+        *5) line-height: 줄간격(세로)
+                        px, 정수
+
+    */
+        .p1 {
+            white-space: nowrap;
+
+            width: 300px;
+            height: 50px;
+            background: pink;
+
+        }
+
+</style>
+
+<body>
+    <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores beatae ducimus iusto vitae error voluptatem eligendi, harum at ut, sit nemo repellendus quod natus doloremque, debitis aperiam? Quos, eius nihil!</p>
+</body>
+</html>

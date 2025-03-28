@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>상품주문서</h1>
+    <form action="#">
+        <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+                <li>이름 <input type="text" name= "uname" placeholder="여백없이 입력">
+                </li>
+                <li>연락처 <input type="text" name= "uphone" placeholder="연락 가능한 번호">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>배송지 정보</legend>
+            <ul>
+                <li>주소 <input type="text" name= "address" placeholder="여백없이 입력">
+                </li>
+                <li>전화번호 <input type="text" name= "possiblenumber" placeholder="연락 가능한 번호">
+                </li>
+                <li>메모 <textarea name= "memo" cols="30" rows="10"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>주문정보</legend>
+            <ul>
+                <li>
+                    <label for="cks">
+                        <input type="checkbox" name="cks" id="cks">칠레산 까르보나라 쇼비뇽</label> 
+                        <input type="number" value="0" name="cks_qty">개
+                </li>
+                <li>
+                    <label for="fpg">
+                        <input type="checkbox" name="fpg" id="fpg">프랑스산 피노그리지오</label>
+                        <input type="number" value="0" name="fpg_qty">개
+                </li>
+                <li>
+                    <label for="kpm">
+                        <input type="checkbox" name="kpm" id="kpm">한국산 평창 막걸리</label>
+                        <input type="number" value="0" name="kpm_qty">개
+                </li>
+            </ul>
+        </fieldset>
+        <div>
+            <!-- <button> 확인 </button> -->
+            <input type="submit" value="확인">
+            <input type="reset" value="취소">
+        </div>
+    </form>
+
+    <!-- name 넣는게 핵심이다 -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+
+            border: 1px solid;
+
+            animation: bg_color 2s infinite, rolling 2s infinite;
+        }
+
+        @keyframes bg_color {
+            from {background: red;}
+            50% {background: green;}
+            to {background: blue;}
+        }
+
+        @keyframes rolling {
+            0% {transform: perspective(400px);}
+            50% {transform: perspective(400px) rotateX(180deg);}
+            100% {transform:  perspective(400px) rotateX(180deg) rotateY(180deg);}
+
+        }
+
+        .outer {
+            text-align: center;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

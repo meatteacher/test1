@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/* 
+    - 화살표 함수
+        화살표 함수는 function 키워드 대신 화살표(=>)를 사용해 간략화 할 수 있다.
+        빠르게 작성이 가능하나, 익명화 간소화로 인해 위치가 강제로 정해져있다
+    
+    *리턴이 있는 경우
+    let 함수명 = () => {return 값}
+
+    *리턴이 없는 경우
+    let 함수명 = () => 값
+
+*/
+
+    function aaa() {        //일반
+        console.log("aaa")
+    }
+
+    let aaa = function() {
+        console.log("aaa")
+    }
+
+    let aaa = () => {       //화살표로 변환
+        console.log("aaa")
+    }
+
+
+
+</script>
+</body>
+</html>

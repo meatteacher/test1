@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    a 태그 - 링크태그
+             페이지끼리 연결해주는 태그
+             inline 레벨
+             기본폰트 파랑, 밑줄 파랑
+             (히스토리가 있는 경우 보라)
+             a태그용 css를 별도로 만들어서 색, 밑줄 등을 관리
+    - 속성 -
+        1) 필수속성
+            href: 클릭했을때 이동할 경로 (img때와 동일)
+                - 서버상의 경로: ./ or ../
+                - 웹상의 경로  : http or https
+                - 이동할 경로가 정해지지 않은 경우 임시링크 (#)을 걸어둔다
+                - 현재 페이지 내부 경로(이때도 #으로 시작 13번 파일에서)
+
+        2) 옵션속성
+            target: 페이지 이동시 현재탭에서 이동할지 새탭에서 이동할지 결정
+                _self: 기본값, 현재창
+                _blank: 새탭에서 링크 연결
+                
+    
+             -->
+
+    <a href="#">
+        <img src='./img (1)/1.jpg' alt='여자모델 사진'>
+    </a>
+
+    <a href="http://www.naver.com" target="_blank"> 네이버 </a>
+
+    <a href="">
+        <div>메뉴</div>
+    </a>
+    <!-- div가 블록 레벨이라서 화면 끝까지 영역을 잡고, a는 인라인이라서 그 div의 가로 사이즈 만큼 영역을 잡을거기 때문에 '메뉴'라는 글씨 우측 빈 공간을 클릭해도 링크가 동작함
+     인라인 레벨은 컨텐츠가 필요한 만큼 칸을 잡는다
+     근데 그 안의 레벨이 블록은 최대한으로 잡으니 인라인은 블록을 기준으로 잡아 최대한으로 잡게 된다. 자식이 부모를 이긴격 -->
+
+
+</body>
+</html>

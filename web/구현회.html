@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body { 
+        margin: 0; 
+        background-color: #9ec8f2;
+    }
+
+    form {
+        width: 400px;
+        background-color: #f0e8e8;
+        margin: 100px auto;
+        padding: 10px;
+        padding-top: 50px;
+        box-sizing: border-box;
+    }
+
+    .title {
+            width: 150px;
+            height: 50px;
+        }
+
+    .inform {
+            width: 250px;
+        }
+
+    .inform > input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 2px dashed;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: transparent;
+    }
+    
+    .join{
+        width: 100%;
+        height: 50px;
+        background: rgb(167, 255, 34);
+        color: rgb(0, 61, 0);
+        border: none;
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 10px;
+    }
+
+    .small {
+        font-size: 11px;
+    }
+
+    .inform {
+        display: flex;
+        align-items: center;
+        height: 50px;
+    }
+
+    </style>
+</head>
+<body>
+    <form action="#">
+        <table>
+            <tr>
+                <td class="title">아이디</td>
+                <td class="inform">
+                    <input type="text" class="id" required>
+                </td>
+            <tr>
+                <td class="title">패스워드</td>
+                <td class="inform">
+                    <input type="password" class="psw" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="title"></td>
+                <td class="inform">
+                    <span class="small">영문자 대/소문자 특수문자, 숫자 포함 8~32자</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="title">패스워드 확인</td>
+                <td class="inform">
+                    <input type="password" class="psw" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="title">이메일</td>
+                <td class="inform">
+                    <input type="text" class="mail">@<input type="text" class="mail">
+                </td>
+            </tr>
+            <tr>
+                <td class="title">주소</td>
+                <td class="inform">
+                    <input type="text" class="adress">
+                </td>
+            </tr>
+            <tr>
+                <td class="title"></td>
+                <td class="inform">
+                    <input type="text" class="adress">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="가입" class="join">
+    </form>
+</body>
+</html>

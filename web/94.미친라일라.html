@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 0;}
+
+        .outer > * { 
+            transition: all 0.3s;
+        }
+
+        .outer {
+            width: 640px;
+            height: 425px;
+            margin: 0 auto;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: calc(100% + 50px);
+
+            position: absolute;
+            top: -50px;
+            left: 0;
+
+            transition: all .3s;
+        }
+
+        .outer:hover img {
+            top: 0;
+        }
+        
+        .barl {
+            border: 0px solid white;
+            height: 0;
+
+            position: absolute;
+            top: 30px;
+        }
+
+        .bar1 {left: 50px;}
+        .bar2 {right: 50px;}
+
+        .outer:hover .bar1,
+        .outer:hover .bar2 {
+            border: 1px solid white;
+            height: calc(100% - 60px);
+        }
+
+        .barO {
+            border: 0px solid white;
+
+            width: 0;
+
+            position: absolute;
+            left: 30px;
+        }
+
+        .bar3 {top: 50px;}
+        .bar4 {bottom: 50px;}
+
+        .outer:hover .bar3,
+        .outer:hover .bar4 {
+            border: 1px solid white;
+            width: calc(100% - 60px);
+        }
+
+        .txt1 {
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 25%;
+
+            transform: translate(-50%);
+        }
+
+        .outer:hover .txt1 {
+            top: 30%;
+        }
+
+        .txt2 {
+            color: white;
+            position: absolute;
+            left: 50%;
+            bottom: 40%;
+            text-align: center;
+            left: 0;
+            right: 0;
+            transform: translatey(-50%);
+            opacity: 0;
+        }
+
+        .outer:hover .txt2 {
+            bottom: 30%;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="./img/트랜지션/books.jpg" alt="">
+        <div class="barl bar1"></div>
+        <div class="barl bar2"></div>
+        <div class="barO bar3"></div>
+        <div class="barO bar4"></div>
+        <div class="txt1">
+            <h1>Crazy Layla</h1>
+        </div>
+        <div class="txt2">
+            When layla appears, she brings on eternal summer along.
+        </div>
+
+    </div>
+</body>
+</html>

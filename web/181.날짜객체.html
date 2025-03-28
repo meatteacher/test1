@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/*
+
+    Date객체 - 로컬 시간을 나타낸다.
+               자료형 - 숫자
+
+        dt.getFullYear() => 4자리, 년도
+        dt.getMonth() => 1자리, 월
+                        0부터 표시되기 때문에 출력시 +1해주고 출력해야함
+        dt.getDate() => 1자리, 일
+        dt.getDay() => 0-일요일/6-토요일, 요일
+        dt.getHours() => 1자리, 시
+        dt.getMinutes() => 1자리, 분
+        dt.getSeconds() => 1자리, 초
+        dt.getMilliseconds() => 밀리초, 1자리
+
+    - 생성자 함수-
+        - 일반적으로 대문자로 시작함
+        - 생성자 함수로 사용할때는 new키워드를 사용함
+
+
+*/
+    let dt = new Date();
+    let year = dt.getFullYear();
+    let month = dt.getMonth() + 1;
+    let date = dt.getDate();
+    let day = dt.getDay();
+
+    let hour = dt.getHours();
+    let min = dt.getMinutes();
+    let sec = dt.getSeconds();
+
+    console.log(`${year}-${month}-${date}-${day}-${hour}-${min}-${sec}`);
+
+    // 특정날짜의 요일 구하기(시분초를 별도로 세팅하지 않으면 0시 0분 0초로 출력됨)
+    let dt2 = new Date(2025,2,12); // 요일 출력하고 싶으면 month에 -1빼고 입력
+    console.log(dt2)
+
+    //날짜더하기
+
+    //현재 로컬 시간 구하기
+    // 주의: 기본 숫자형이가 때문에 그냥 더하면 해당 월일의 최대 수치를 넘어간다. 그래서 내장함수를 사용
+
+    /*
+        날짜를 더하거나 뺄때 년, 월 이 바껴야하는 경우 내장함수 사용
+        setMonth: 년이 바껴야하는 상황으면 바꿈
+        setDate: 년/월 필요하면 모두 바꿈
+    */
+
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 400px;
+            border: 1px solid;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .btn_box ul {
+            display: flex;
+        }
+
+        .btn_box {
+            width: 100%;
+            height: 50px;
+            background: pink;
+        }
+
+        .btn_box li {
+            width: calc(100% / 4);
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+
+        .pan_box {
+            width: 100%;
+            height: 400px;
+            background: skyblue;
+        }
+
+        .pan {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .red {background: red;}
+        .green {background: green;}
+        .blue {background: blue;}
+        .grey {background: grey;}
+
+        /* border를 못주는 경우 box-shadow로 줘 선을 준다 */
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="radio" id="rd1">
+        <input type="radio" id="rd2">
+        <input type="radio" id="rd3">
+        <input type="radio" id="rd4">
+
+        <div class="btn_box">
+            <label for="rd1">빨</label>
+            <label for="rd2">초</label>
+            <label for="rd3">파</label>
+            <label for="rd4">회</label>
+        </div>
+        <div class="pan_box">
+            <div class="pan red"></div>
+            <div class="pan green"></div>
+            <div class="pan blue"></div>
+            <div class="pan grey"></div>
+        </div>
+    </div>
+</body>
+</html>

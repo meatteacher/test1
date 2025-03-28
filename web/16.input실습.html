@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>링크이동</th>
+                        <td>아래 링크를 클릭하시오</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- th태그는 기본 가운데 정렬이지만 table위에 다른 조상이 있는 경우 왼쪽 정렬 될 때도 있음 -->
+                        <th>네이버</th>
+                        <td>
+                            <a href="http://www.naver.com" target="_blank"> www.naver.com </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>다음</th>
+                        <td><a href="https://www.daum.net/" target="_blank"> www.daum.net </a></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </li> 
+        <li>
+            <b>KH정보교육원 지점 소개</b>
+            <ul type="square"> 
+                <li>강남점
+                    <ol>
+                        <li>웹퍼블리셔</li>
+                        <li>프론트엔드</li>
+                        <li>백엔드</li>
+                    </ol>
+                </li>
+                <li>일산점</li>
+                <li>종로점</li>
+            </ul>
+        </li>
+        <li>
+            <table>
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <td><input type="text" value="이름을 입력하시오"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>비밀번호</th>
+                        <td><input type="password" placeholder="비밀번호를 입력하시오"></td>
+                    </tr>
+                    <tr>
+                        <th>수강과목</th>
+                        <td>
+                            <label for="web1">
+                                <input type="radio" value="웹1" name="web" id="web1">웹1
+                            </label>
+                            <label for="web2">
+                                <input type="radio" value="웹2" name="web" id="web2">웹2
+                            </label>
+                            <label for="web3">
+                                <input type="radio" value="웹3" name="web" id="web3">웹3
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="저장"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </li>
+        
+    </ul>
+</body>
+</html>

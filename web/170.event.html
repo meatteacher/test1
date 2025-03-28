@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">1</div>
+
+<script>
+    /*
+
+        이벤트 - 키보드를 눌리건
+                마우스가 클릭/휠움직임이 생기거나
+                한개의 요소에 여러개의 이벤트를 적용할 수 있다.
+
+        이벤트 리스나 등록방법 
+            1) 인라인 방식 - HTML 요소의 여는 태그안에 on을 붙여서 이벤트 등록
+                            ex) <div onclick="")> </div>
+                        요소가 여러개일때 하나하나 건들여야 해서 유지보수시 좋지 않음
+            2) addEventListener
+                        요소.addEventListner('이벤트', 함수)
+                        *여러개의 요소에 적용하려면 반복문 이용해서 addEventListner를 준다
+
+        addEventListener에서 사용할 함수에 매개변수 없이 바로 함수명을 호출해 사용 가능
+
+        -onload: DOM 구조가 다 로드된 이후 동작
+                 defer랑 실행되는 순번은 같지만 동작 방식은 다름
+                 *예전에는 브라우저를 만든 회사마다 HTML 동작순서가 달랐어서 onload를 열어군데 걸어두면 제대로 동작하지 않은 곳이 있을수 있음.
+
+        - 마우스
+            1) onclick : 클릭
+            2) ondblclick : 더블클릭
+
+            3) onmouseover : 마우스 해당 요소에 올라갔을때(hover)
+               onmouseout : 마우스가 해당 요소에서 나왔을때
+            4) onmouseenter : 오버와 비슷하지만 버블링처리
+               onmouseleave : 아웃과 비슷하지만 버블링처리
+            *over/out과 enter/leave는 비슷하나 
+             over/out는 버블링 효과 남아있고 enter/leave는 이를 처리함
+            *버블링효과란: 자식에 마우스가 들어가면 부모도 같이 잡히는 현상
+            *event.stopPropagation(): 버블링 효과를 그나마 자식에서 끝나게(확산방지)해주는 함수
+
+
+            5) onmousemove : 마우스가 해당 요소에서 움직일때
+
+        - 키보드
+            1) onkeydown: 키를 누르는 순간 동작
+            2) onkeyup: 키를 떼는 순간 동작
+            3) onkeypress: 안씀
+                           한글, 특수문자 인지 안되는게 있다.
+                
+            *event.keyCode
+    */
+
+    let box = document.getElementById('box')
+    box.addEventListener('click', function(){
+        alert("와이")
+    })
+</script>
+</body>
+</html>

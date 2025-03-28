@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="시작" onclick="start()">
+    <input type="button" value="멈춤" onclick="stop()">
+</body>
+<script>
+    let count = 0;
+    let interval="";
+    document.write(interval)
+    function start() {
+        // clearInterval(interval)
+        stop()
+
+        
+        interval = setInterval(function() {
+            count++
+        }, 1000);
+    }
+
+    function stop() {
+        clearInterval(interval)
+    }
+</script>
+</html>

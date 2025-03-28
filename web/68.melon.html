@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 500px;
+            border: 1px solid;
+        }
+
+        ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        li {
+            width: 100%;
+            height: 40px;
+            border: 1px solid;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn_box {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            overflow: hidden;
+        }
+        label {
+            display: block;
+            width: calc(100% / 3);
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+
+            /* border-right: 1px solid;
+            box-sizing: border-box; */
+
+            background: #fff;
+            box-shadow: -1px 0 0 0 #000;
+        }
+        /* label:last-child {border: none} */
+
+        #rd1:checked ~ .btn_box > label:nth-child(1),
+        #rd2:checked ~ .btn_box > label:nth-child(2),
+        #rd3:checked ~ .btn_box > label:nth-child(3)        
+            {width: calc(100% / 3);
+            height: 10px;
+            background-color: limegreen;
+            box-sizing: border-box;
+            position: relative;
+            top: 0;
+            left: 0;}
+
+        
+        .pan_box {
+            width: 100%;
+            height: 400px;
+    /* position: relative; */
+        }
+        .pan {
+            width: 100%;
+            height: 100%;
+
+            /* position: absolute;
+            left: 0;
+            top: 0; */
+
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            /* width: 100%;
+            height: 3px;
+            background-color: green;
+            position: relative;
+            top: 0;
+            left: 0; */
+        }
+
+
+        #rd1:checked ~ .pan_box > .top {display: block;}
+        #rd2:checked ~ .pan_box > .pop {display: block;}
+        #rd3:checked ~ .pan_box > .artist {display: block;}
+
+
+        input[name="rd"] { display: none;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="radio" id="rd1" name="rd">
+        <input type="radio" id="rd2" name="rd">
+        <input type="radio" id="rd3" name="rd">
+
+
+        <div class="btn_box">
+            <label for="rd1">
+                <div class="bar"></div>
+                TOP
+            </label>
+            <label for="rd2">
+                <div class="bar"></div>
+                POP
+            </label>
+            <label for="rd3">
+                <div class="bar"></div>
+                아티스트
+            </label>
+
+        </div>
+        <div class="pan_box">
+            <div class="pan top">
+                <ul class="top">
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                    <li class="top_li">TOP-100</li>
+                </ul>
+            </div>
+            <div class="pan pop">
+                <ul class="pop">
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                    <li class="pop_li">POP-100</li>
+                </ul>
+            </div>
+            <div class="pan artist">  
+                <ul class="artist">
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                    <li class="art_li">아티스트-100</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

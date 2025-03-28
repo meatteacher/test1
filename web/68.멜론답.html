@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #444;
+        }
+
+        .chart {
+            width: 500px;
+            margin: 100px auto;
+
+            background-color: #fff;
+        }
+
+        .btn_box {
+            width: 100%;
+            height: 50px;
+
+            display: flex;
+
+
+
+            background-color: pink;
+        }
+        
+        .btn_box > label {
+            width: calc(100% / 3);
+            font-size: 20px;
+            font-weight: 900;
+
+            text-align: center;
+            line-height: 30px;
+
+            border: 1px solid;
+            border-top: 10px solid transparent;
+            box-sizing: border-box;
+        }
+
+        #rd1:checked ~ .btn_box > label[for="rd1"],#rd2:checked ~ .btn_box > label[for="rd2"],#rd3:checked ~ .btn_box > label[for="rd3"] {
+            border-top: 10px solid green;
+        }
+
+        .pan {
+            
+        }
+
+        .item {
+            text-align: center;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 50px;
+            background-color: #fff;
+        }
+
+        .item:nth-child(even) {
+            background-color: #b2b2b2;
+        }
+
+        #rd1:checked ~ .pan_box > .pan1,
+        #rd2:checked ~ .pan_box > .pan2,
+        #rd3:checked ~ .pan_box > .pan3 {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <div class="chart">
+            <input type="radio" name="rd" id="rd1">
+            <input type="radio" name="rd" id="rd2">
+            <input type="radio" name="rd" id="rd3">
+            <div class="btn_box">
+                <label for="rd1">TOP</label>
+                <label for="rd2">POP</label>
+                <label for="rd3">아티스트</label>
+            </div>
+            <div class="pan_box">
+                <div class="pan pan1">
+                    <div class="item">1 - TOP-100</div>
+                    <div class="item">2 - TOP-100</div>
+                    <div class="item">3 - TOP-100</div>
+                    <div class="item">4 - TOP-100</div>
+                    <div class="item">5 - TOP-100</div>
+                    <div class="item">6 - TOP-100</div>
+                    <div class="item">7 - TOP-100</div>
+                    <div class="item">8 - TOP-100</div>
+                    <div class="item">9 - TOP-100</div>
+                    <div class="item">10 - TOP-100</div>
+                </div>
+                <div class="pan pan2">
+                    <div class="item">1 - POP</div>
+                    <div class="item">2 - POP</div>
+                    <div class="item">3 - POP</div>
+                    <div class="item">4 - POP</div>
+                    <div class="item">5 - POP</div>
+                    <div class="item">6 - POP</div>
+                    <div class="item">7 - POP</div>
+                    <div class="item">8 - POP</div>
+                    <div class="item">9 - POP</div>
+                    <div class="item">10 - POP</div>
+                </div>
+                <div class="pan pan3">
+                    <div class="item">1 - Artist</div>
+                    <div class="item">2 - Artist</div>
+                    <div class="item">3 - Artist</div>
+                    <div class="item">4 - Artist</div>
+                    <div class="item">5 - Artist</div>
+                    <div class="item">6 - Artist</div>
+                    <div class="item">7 - Artist</div>
+                    <div class="item">8 - Artist</div>
+                    <div class="item">9 - Artist</div>
+                    <div class="item">10 - Artist</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

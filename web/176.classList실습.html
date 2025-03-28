@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {background: none;}
+
+        .red {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" id="box">box</div>
+    <input type="button" value="확인" id="btn">
+<script>
+/*
+    1. 확인버튼 누르면 박스 영역에 배경색 변경
+        - 기존 빨간색이면 기본색으로
+        - 기본색이면 빨간색으로
+    
+    2. 확인버튼 누르면 박스영역에 배경색 변경
+        기본 빨강 초록 파랑 순으로 변경
+
+    3. 확인버튼 누르면 박스영역의 문구 변경
+*/
+let button = document.getElementById("btn")
+let box = document.getElementById("box")
+let count = 0;
+let = ["red", "none"]
+
+button.addEventListener('click', function(){
+    // 방법1 홀짝 스위칭
+    // if(count % 2 == 0){
+    // box.style.background="red";
+    // }
+    // else {
+    //     box.style.background="none";
+    // }
+    // count++
+
+
+    // 배열넣고 돌리기
+    // box.style.background=arr[count++ %2];
+
+    // 토글
+    box.classList.toggle('red')
+    })
+
+
+</script>
+</body>
+</html>

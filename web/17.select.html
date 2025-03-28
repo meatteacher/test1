@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        select : 여러개의 옵션을 리스트처럼 나열하고 그 중에서 선택할 수 있게 하는 태그
+                 부모로만 사용 가능
+                 inline-block 카테고리상 inline 레벨
+
+        option : select의 자식/자손으로만 사용 가능
+                 select의 실제 리스트 알맹이
+
+        - 속성 -
+            *1) selected: option에 적용
+                          checked나 autofocus 처럼 처음부터 선택되서 나타남
+
+            2) multiple: select에 적용
+                         여러개 선택 가능하게 되지만 디자인상 좋지 않아 잘 안씀
+            3) name : select에 적용
+            4) value: option에 적용
+
+    optgroup : option 들을 그룹핑 해주는거
+            label 속성: 해당 optgroip에 이름표 달아줌
+    
+    -->
+    <select>
+        <option value="">웹1</option>
+        <option value="">웹2</option>
+        <option value="">웹3</option>
+    </select>
+<br>
+    <select>
+        <optgroup label="그룹1">
+            <option value="">웹1</option>
+            <option value="">웹2</option>
+            <option value="">웹3</option>
+            <option value="">웹1</option>
+            <option value="">웹2</option>
+            <option value="">웹3</option>
+        </optgroup>
+
+        <optgroup label="그룹1">
+            <option value="">웹1</option>
+            <option value="">웹2</option>
+            <option value="">웹3</option>
+            <option value="">웹1</option>
+            <option value="">웹2</option>
+            <option value="">웹3</option>
+        </optgroup>
+    </select>
+    <br>
+
+        <select>
+            <option value="">웹1</option>
+            <option value="">웹2</option>
+            <option value="">웹3</option>
+        </select>
+
+
+</body>
+</html>

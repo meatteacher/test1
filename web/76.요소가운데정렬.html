@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .outer {
+        width: 300px;
+        height: 300px;
+        border: 1px solid;
+
+        position: relative;
+    }
+
+    .inner {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+
+        position: absolute;
+
+        left: calc(50% - 50px);
+        top: calc(50% - 50px);
+    }
+    
+    .inner2 {
+        background-color: blue;
+        position: absolute;
+
+        top: calc(100% / 3);
+        left: calc(100% / 3);
+        right: calc(100% / 3);
+        bottom: calc(100% / 3);
+    }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    <div class="outer">
+        <div class="inner2"></div>
+    </div>
+</body>
+</html>

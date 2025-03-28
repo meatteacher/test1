@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+    년 월 일 요일 출력
+    시:분:초
+
+    -출력-
+        YYYY-MM-DD X요일
+        HH:MM:ss
+        2025-03-12 수요일
+    */
+
+    let dt = new Date();
+    let year = dt.getFullYear();
+    let month = dt.getMonth() + 1;
+
+    if(month < 10) {
+        month  = '0'+month
+    }
+
+    let date = dt.getDate();
+
+    let day = dt.getDay();
+    let Day = ["일","월","화","수","목","금","토"]
+    let hour = dt.getHours();
+    let min = dt.getMinutes();
+    if(min < 10) {
+        min  = '0'+min
+    }
+    let sec = dt.getSeconds();
+    if(sec < 10) {
+        sec  = '0'+sec
+    }
+
+    let apm = hour
+    if(hour < 12){
+        apm = "AM"
+    }
+    else {
+        apm = "PM"
+    }
+    if(hour > 12) {
+        hour = hour - 12
+        if(hour < 10){
+            hour  = '0'+hour
+        }
+    }
+    
+
+    document.write(`${year}-${month}-${date} ${Day[day]}요일 <br>`)
+    document.write(`${hour}:${min}:${sec} ${apm}`)
+</script>
+</body>
+</html>

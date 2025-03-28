@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap"></div>
+<script>
+    let ul_tmp = document.createElement("ul");
+    ul_tmp.setAttribute("class", "ulc")
+
+    for(let i=1; i<=10;i++){
+        let li_tmp = document.createElement("li");
+
+
+
+        let txt_tmp = document.createTextNode(`menu${i}`);
+
+        li_tmp.append(txt_tmp);
+
+        ul_tmp.append(li_tmp)
+        document.getElementById('wrap').append(ul_tmp)
+        }
+
+    
+</script>
+</body>
+</html>

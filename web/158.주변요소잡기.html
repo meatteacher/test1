@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parant">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+    <script>
+    /*
+        1) 자식요소들 다 잡기: 부모요소.children
+
+        2) 첫번째 자식 요소: 부모요소.firstElementChild
+
+        3) 마지막 자식 요소: 부모요소.lastElementChild
+
+        4) 부모 찾기: 자식요소.parentElement
+
+        5) 이전요소: 기준요소.previousElementSibling
+           다음요소: 기준요소.nextElementSibling
+    */
+            let parent = document.getElementsByClassName('parant')[0];
+            let box2 = document.getElementsByClassName('box')[1];
+
+            console.log(parent)
+            console.log(box2)
+
+            console.log(parent.children)
+            console.log(box2.parentElement)
+            console.log(box2.previousElementSibling)
+            console.log(box2.nextElementSibling)
+
+            console.log(parent.firstElementChild)
+            console.log(parent.lastElementChild)
+
+    </script>
+</body>
+</html>

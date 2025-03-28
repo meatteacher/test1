@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 0;}
+
+        #wrap {
+            width: 400px;
+            margin: 0 auto;
+
+            background-color: pink;
+        }
+
+        label {
+            /* width: calc(100% - 40px); */
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            padding: 5px 20px;
+            
+            font-size: 20px;
+            color: #777;
+            background: linear-gradient(#fff, #eaeaea);
+
+            box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3);
+        }
+
+        label:hover {
+            background: #fff;
+            cursor: pointer;
+        }
+
+
+        .txt {
+            font-style: italic;
+            font-size: 14px;
+            color: #777;
+
+
+            height: 0;
+
+            overflow: hidden;
+
+            transition: all 0.3s;
+
+
+
+        }
+
+        p {
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* #rd1:checked ~ label:nth-of-type(1),
+        #rd2:checked ~ label:nth-of-type(2),
+        #rd3:checked ~ label:nth-of-type(3),
+        #rd4:checked ~ label:nth-of-type(4) { */
+        input[name="rd"]:checked ~ label {
+            background: #c6e1ec;
+        }
+
+        #rd1:checked ~ .txt:nth-of-type(1),
+        #rd2:checked ~ .txt:nth-of-type(2),
+        #rd3:checked ~ .txt:nth-of-type(3),
+        #rd4:checked ~ .txt:nth-of-type(4) {
+            height: 200px ;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <input type="radio" name="rd" id="rd1">
+        <input type="radio" name="rd" id="rd2">
+        <input type="radio" name="rd" id="rd3">
+        <input type="radio" name="rd" id="rd4">
+    <div>
+        <label for="rd1"> About us</label>
+        <div class="txt">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa velit, maxime iure expedita quia ullam vitae pariatur fuga. Magni deleniti temporibus tenetur commodi magnam nesciunt sit non excepturi provident ut?</p>
+        </div>
+    </div>
+    <div>
+        <label for="rd2"> How we work</label>
+        <div class="txt">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa velit, maxime iure expedita quia ullam vitae pariatur fuga. Magni deleniti temporibus tenetur commodi magnam nesciunt sit non excepturi provident ut?</p>
+        </div>
+    </div>
+    <div>
+        <label for="rd3">Reference</label>
+        <div class="txt">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa velit, maxime iure expedita quia ullam vitae pariatur fuga. Magni deleniti temporibus tenetur commodi magnam nesciunt sit non excepturi provident ut?</p>
+        </div>
+    </div>
+    <div>
+        <label for="rd4"> Contact us</label>
+        <div class="txt">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore enim exercitationem accusamus praesentium perferendis amet, aut quidem odio est necessitatibus reprehenderit rem quis ea ab quae, facilis quaerat, distinctio laboriosam.</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

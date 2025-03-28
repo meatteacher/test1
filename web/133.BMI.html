@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/* 
+
+BMI - 비만도 체크
+    공식: 몸무게/키의 제곱
+
+*/
+let name = prompt("이름")
+let tall = +prompt("키 작성")*0.01;
+let weight = +prompt("몸무게");
+
+let BMI = (weight / (tall*tall)).toFixed(2);
+
+let jud = "저체중"
+if(BMI >= 25) {
+    jud = "비만"
+}
+else if(BMI >= 23) {
+    jud = "과체중"
+}
+else if(BMI >= 18.5) {
+    jud = "정상"
+}   
+
+let txt = (name+"님의 BMI 수치는 "+BMI+"이고 "+jud+"입니다.")
+
+console.log(txt)
+document.write(txt)
+
+
+</script>
+</body>
+</html>

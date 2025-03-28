@@ -1,0 +1,92 @@
+body { margin: 0;}
+ul { 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 세팅 */
+
+#wrap {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.header1 {
+    height: 50px;
+}
+
+.header2 {
+    height: 60px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    background:  url(./naver.png);
+    background-size: 452px 436px;
+}
+.icon_menu {
+    background-position: -310px -165px;
+    float: left;
+}
+.icon_pay {
+    background-position: -248px -260px;
+    float: left;
+}
+
+.right_menu {
+    float: right;
+    box-sizing: border-box;
+}
+
+.icon_bubble {
+    background-position: -98px -316px;
+    float: left;
+}
+.icon_bell {
+    background-position: -310px -232px;
+    float: left;
+}
+.icon_shoppingBag {
+    background-position: -31px -316px;
+    float: left;
+}
+.search {
+    width: 680px;
+    height: 70px;
+    border: 1px solid green;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.keyword {
+    /* width: 100%; */
+    width: calc(100% - 110px);
+    height: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
+}
+
+.nav_box {
+    width: 650px;
+    height: 70px;
+    margin: 10px auto;
+    display: flex;
+
+    background-color: pink;
+}
+
+.nav_item {
+    
+}

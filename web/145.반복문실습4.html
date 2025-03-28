@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/*
+    숫자 -1 넣기 전까지 계속 입력받기
+    총액이 10000 이상이면 10% 할인
+    총액이 50000 이상이면 20% 할인
+
+    - 출력 - 
+        전체 상품 금액: XXXX원
+        할인율: XX%
+        할인 금액: XXXX원
+        총액: XXXX원
+*/
+
+let input = +prompt("숫자를 입력하시오");
+let sum = input;
+let count = 0;
+
+while(input != -1) {
+    sum += input;
+    document.write(`${count++}번째 물풀 가격: ${input}<br>`)
+    input = +prompt("숫자를 입력하시오");
+    // if(input == -1) {
+    //     break;
+    // }
+    // sum += input;
+}
+
+if (sum >= 10000) {
+    salep = "10%"
+    sale = sum*0.1
+    if(sum >= 50000) {
+        salep = "20%"
+        sale = sum*0.2
+    }
+}
+
+else {
+    salep = "0"
+    sale = sum*0
+}
+
+document.write (
+    "-출력- <br>"+
+    "전체 상품 금액: "+sum+"원<br>"+
+    "할인율 :"+salep+"<br>"+
+    "할인 금액 :"+sale+"원<br>"+
+    "총액 :"+(sum - sale)+"원"
+)
+
+
+
+
+</script>    
+</body>
+</html>

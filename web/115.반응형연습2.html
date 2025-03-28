@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #wrap {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background: lime;
+        }
+
+        .section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;   
+            background: skyblue;         
+        }
+
+        .blue_box {
+            width: 100%;
+            display: flex;
+        }
+
+        .blue {
+            width: calc((100% - 40px) / 3);
+            padding-bottom: 30%;
+            background: blue;
+            font-size: 40px;
+        }
+
+        .bbox1 {margin-right: 20px;}
+        .bbox3 {margin-left: 20px;}
+
+        .red_box {
+            width: 100%;
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .red {
+            width: calc((100% - 20px) / 2);
+            padding-bottom: 30%;
+            background: red;
+            font-size: 40px;
+        }
+
+        .rbox1 {
+            margin-right: 20px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .section {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;   
+            background: skyblue;         
+            }
+
+            .blue {
+            width: calc((100% - 20px) / 2);
+
+            background: blue;
+            }
+
+            .bbox3 {
+                display: none;
+            }
+
+            .red_box {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .red {
+            width: 100%;
+
+            background: red;
+            }
+
+            .rbox1 {
+                margin-bottom: 20px;
+            }
+
+        }
+
+        @media screen and (max-width: 500px) {
+            .section {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;   
+            background: skyblue;         
+            }
+
+            .blue_box {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            }
+
+            .blue {
+            width: 100%;
+
+            background: blue;
+            }
+
+            .bbox1 {order: 3; margin-top: 20px;}
+            .bbox2 {order: 2; margin-top: 20px;}
+            .bbox3 {order: 1; display: block; margin: 0;}
+
+            .red {
+            width: 100%;
+
+            background: red;
+            }
+
+            .rbox1 {order: 2;}
+            .rbox2 {order: 1; margin-bottom: 20px;}
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <div class="section">
+            <div class="blue_box">
+                <div class="blue bbox1">1</div>
+                <div class="blue bbox2">2</div>
+                <div class="blue bbox3">3</div>
+            </div>
+            <div class="red_box">
+                <div class="red rbox1">1</div>
+                <div class="red rbox2">2</div>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>

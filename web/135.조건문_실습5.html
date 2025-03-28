@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+/*
+
+숫자 세개 입력
+총액이 10000원 이상이면 10% 할인
+총액이 50000원 이상이면 20% 할인
+*/
+
+let good1 = +prompt("상품1 가격");
+let good2 = +prompt("상품2 가격");
+let good3 = +prompt("상품3 가격");
+
+let total = good1 + good2 + good3;
+
+if(total >= 50000) {
+    salep = "20"
+    sale = total*0.2
+}
+else if(total >= 10000) {
+    salep = "10"
+    sale = total*0.1
+}
+
+else {
+    salep = "0"
+    sale = total*0
+}
+
+console.log("전체 상품 금액 : "+total+"원")
+console.log("할인율 : "+salep+"%")
+console.log("할인금액 : "+sale+"원")
+console.log("할인 상품 금액 : "+(total - sale)+"원")
+
+document.write("전체 상품 금액 : "+total+"원<br>")
+document.write("할인율 : "+salep+"%<br>")
+document.write("할인금액 : "+sale+"원<br>")
+document.write("총액 : "+(total - sale)+"원")
+
+</script>
+</body>
+</html>

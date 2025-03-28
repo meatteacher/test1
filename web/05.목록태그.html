@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 목록: 블록레벨 
+            (기본 왼쪽에 여백있음)
+        ul: li의 부모로만 사용 가능
+            순서가 필요없는 목록
+
+        ol: li의 부모로만 사용 가능
+            순서가 필요한 목록
+
+        li: ul/ol의 자식으로만 사용 가능<-중요!!
+
+          속성
+            1) type: 리스트의 모양(점, 숫자)를 처리
+                    ul- disc(기본값, 검은점)
+                        circle(흰점)
+                        square(검은 사각형)
+                        *none(점 표시 안함)
+                        *중첩으로 ul을 사용하는 경우 기본값이 disc, circle, square 순으로 나타난다. none은 직접 입력해야한다.
+                    ol- 1(기본값, 정수)
+                        a(영어 소문자)
+                        A(영어 대문자)
+                        i(로마 소문자)
+                        I(로마 대문자)
+    
+            2) start: (ol용)   시작점 변경
+
+            3) reversed (ol용) 시작점부터 거꾸로 표시
+                        start를 li의 개수보다 길거나 크게 놔야함
+    -->
+     <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+     </ul>
+     
+     <ul type="square">
+        <li>menu1</li>
+        <li>menu2
+            <ul>
+                <li>sec</li>
+                <li>sec</li>
+            </ul>
+        </li>
+        <li>menu3</li>
+     </ul>
+
+     <ol>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+     </ol>
+
+     ----------------------
+     <!-- dl: dt/dd의 부모로만 사용 가능
+          dt: 왼쪽정렬, 제목
+          dd: 들여쓰기, 내용-->
+     <dl>
+        <dt>제목</dt>
+        <dd>내용</dd>
+     </dl>
+</body>
+</html>

@@ -1,0 +1,167 @@
+body { 
+    margin: 0;
+    border-top: 5px solid green;
+    width: 100%;
+}
+ul { 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #666666;
+    font-family: sans-serif;
+}
+
+.header {
+    width: 1200px;
+    height: 120px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    min-width: 1200px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/subway/logo_w.png);
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    margin-left: -100px;
+}
+
+.menu_ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #292929;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    cursor: pointer;
+}
+
+.menu_li {
+    width: 160px;
+    text-align: center;
+    float: left;
+
+}
+
+.menu_li:hover {
+    color: green;
+}
+
+.login_ul {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+
+}
+
+.login_li {
+    float: left;
+    height: 30px;
+    margin-left: 30px;
+    display: flex;
+}
+
+.banner {
+    height: 450px;
+    margin-top: 50px;
+    position: relative;
+    min-width: 1200px;
+}
+
+.cross {
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    top: 175px;
+    font-size: 50px ;
+    font-weight: 900;
+    color: #666666;
+}
+
+.cross_L {
+    height: 440px;
+    width: 80px;
+    float: left;
+    text-align: center;
+    line-height: 450px;
+}
+
+.cross_R {
+    height: 440px;
+    width: 80px;
+    float: right;
+    text-align: center;
+    line-height: 450px;
+}
+
+.cross:hover .cross_L{
+    background-color: rgb(158, 158, 158, 0.5);
+    color: white;
+}
+
+.cross:hover .cross_R{
+    background-color: rgb(158, 158, 158, 0.5);
+    color: white;
+}
+
+.simple_menu {
+    width: 1200px;
+    height: 80px;
+    position: absolute;
+    top: 575px;
+    margin-left: -600px;
+}
+
+.simple_set {
+    float: right;
+}
+
+.simple_menu_L {
+    width: 300px;
+    height: 80px;
+    background-color: yellow;
+    color: #292929;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 80px;
+    float: left;
+    border-radius: 25px 0 0 0;
+}
+
+.simple_menu_R {
+    width: 300px;
+    height: 80px;
+    background-color: green;
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    float: left;
+    border-radius: 0 0 25px 0;
+}

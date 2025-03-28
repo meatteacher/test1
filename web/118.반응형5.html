@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #wrap {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .upper_banner {
+            height: 40px;
+            background: #414247;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .banner_box {
+            width: 1300px;
+            margin: 0 auto;
+        }
+
+        #hide {
+            display: none;
+        }
+        .X {
+            cursor: pointer;
+            float: right;
+        }
+
+        .X > div {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #fff;
+            border-radius: 50px;
+        }
+
+        #hide:checked ~ .upper_banner {
+        display: none;
+        }
+
+        .header1 {
+            height: 30px;
+        }
+
+        .header_box {
+            float: right;
+        }
+
+        .header2 {
+            height: 100px;
+        }
+
+        .logo {
+            width: 200px;
+            float: left;
+        }
+        .menu_bar {
+            display: flex;
+            float: right;
+            margin-top: 50px;
+            transform: translate(0, -50%);
+        }
+
+        .menu_set {
+            display: flex;
+            flex-direction: column;
+            height: 40px;
+            width: 100px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+        .menu1 {
+            height: 40px; line-height: 40px;
+            position: absolute;
+            top: 0;
+            transition: all 0.3s;
+        }
+        .menu2 {
+            height: 0; line-height: 40px;
+            position: absolute;
+            top: 40px;
+            transition: all 0.3s;
+        }
+
+        .menu_set:hover .menu1{
+            top: -40px;
+        }
+
+        .menu_set:hover .menu2 {
+            top: 0;
+        }
+
+        .main_banner,
+        .mbi1
+        {width: 100%;}
+
+        .category {
+            width: 100%;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        h3 {width: 100%;}
+
+        .sangpom {width: 100%;}
+
+        input[name="rd"] { display: none;}
+
+        #rd1:checked ~ .btn_box  .mp1:nth-child(1) {border-bottom: 2px solid #222;}
+        #rd2:checked ~ .btn_box  .mp2:nth-child(2) {border-bottom: 2px solid #222;}
+
+        .mp1:hover {
+            border-bottom: 2px solid #ddd;
+        }
+
+        .mp2:hover {
+            border-bottom: 2px solid #ddd;
+        }
+
+        .middle1 { background: red;}
+        .middle2 { background: green;}
+
+        #rd1:checked ~ .pan_box > .middle1 {display: block;}
+        #rd2:checked ~ .pan_box > .middle2 {display: block;}
+
+        .btn_box {
+            height: 30px;
+        }
+
+        .mp {
+            float: right;
+            width: 200px;
+            display: flex;
+            text-align: center;
+        }
+
+        .mp1 {
+            width: 100px; display: inline-block;
+            /* border-bottom: 2px solid #ddd; */
+        }
+
+        .mp2 {
+            width: 100px; display: inline-block;
+            /* border-bottom: 2px solid #ddd; */
+        }
+
+        .pan {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .pan_box {
+            width: 100%;
+            background: skyblue;
+        }
+
+        .pan_menu {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            min-width: 1300px;
+            overflow: hidden;
+        }
+
+        .pan_img {
+            width: 100%;
+        }
+
+        .pi1 {width: 100%;}
+
+        .pm_div {
+            width: calc((100% - 30px) / 4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sail_box {
+            width: 50px;
+            height: 50px;
+            background: #000;
+            position: absolute;
+            right: 0;
+            top: -50px;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        .pm {
+            width: 100%;
+            transform: scale(100%);
+            transition: all 0.3s;
+        }
+
+        .pm_div:hover .pm {
+            transform: scale(120%);
+        }
+
+        .pm_div:hover .sail_box {
+            top: 0;
+        }
+
+        footer {
+            width: 100%;
+            height: 200px;
+            background: #000;
+        }
+
+        /* 팝업 */
+.layer_popup {
+    width: 300px;
+    height: 450px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 50px;
+    bottom: 200px;
+    z-index: 999999999999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup {
+    width: 300px;
+    height: 450px;
+    background-color: orange;
+
+    /* position: absolute;
+    left: calc(50% - (500px / 2));
+    top: calc(50% - (500px / 2)); */
+
+    position: relative;
+}
+
+.popi {
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.poi {
+    position: absolute;
+    overflow: hidden;
+    width: 250px;
+}
+
+.div_popa > .poimg1 {left: 0;}
+.div_popa > .poimg2 {left: 100%;}
+.div_popa > .poimg3 {left: 200%;}
+.div_popa > .poimg4 {left: 300%;}
+.div_popa > .poimg5 {left: 400%;}
+.div_popa > .poimg6 {left: 500%;}
+
+.div_popb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    top: 250px;
+}
+
+.poimg {
+    width: calc((100% - 50px) / 3);
+    margin: 5px 5px;
+}
+
+.btn_close {
+    font-size: 20px;
+    font-weight: 900;
+    color: #000;
+    border: 3px solid #000;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+#rd3,
+#rd3:checked + .layer_popup {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .upper_banner {
+            height: 40px;
+            background: #414247;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            display: none;
+        }
+
+    .pan_menu {
+        margin: 0 0 0 10px;
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            min-width: auto;
+            gap: 10px;
+            overflow: hidden;
+        }
+    .pm_div {
+            width: calc((100% - 30px) / 2);
+            overflow: hidden;
+        }
+        
+        .header2_pc {
+            display: none;
+        }
+
+        .ham_btn {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: grey;
+        }
+
+        .nav {
+            width: 300px;
+            height: calc(100vh - 50px);
+            background-color: aqua;
+
+            transform: translateX(-100%);
+            transition: all 0.5s;
+        }
+
+        #chk:checked ~ .nav {
+            transform: translateX(0%);
+        }
+
+        #chk {display: none;}
+
+}
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="hide" />
+
+    <div class="upper_banner">
+        <div class="banner_box">
+            프론트엔드 과정에 오신걸 환영합니다.
+            <label for="hide" class="X">
+                <div>X</div>
+            </label>
+        </div>
+    </div>
+    </div>
+    <div id="wrap">
+        <div class="header1">
+            <div class="header_box">
+                <span class="header1">로그인</span>
+                <span class="header1">회원가입</span>
+            </div>
+        </div>
+        <div class="header2_pc">
+            <img src="./img/반응형/iDeco/logo.png" class="logo">
+            <div class="menu_bar">
+                <div class="menu_set">
+                    <div class="menu1">회사소개</div>
+                    <div class="menu2">Company</div>
+                </div>
+                <div class="menu_set">
+                    <div class="menu1">포트폴리오</div>
+                    <div class="menu2">Portfolio</div>
+                </div>
+                <div class="menu_set">
+                    <div class="menu1">커뮤니티</div>
+                    <div class="menu2">Community</div>
+                </div>
+                <div class="menu_set">
+                    <div class="menu1">리뷰</div>
+                    <div class="menu2">Review</div>
+                </div>
+            </div>
+        </div>
+        <label for="chk" class="ham_btn">X</label>
+        <input type="checkbox" id="chk">
+        <div class="nav"></div>
+    </div>
+    <div class="main_banner">
+        <img src="./img/반응형/iDeco/main_banner1.jpg" class="mbi mbi1">
+    </div>
+    <div id="wrap">
+        <div class="category">
+            <h3>카테고리별 인기상품 입니다.</h3>
+            <div class="sangpom">
+                <input type="radio" id="rd1" name="rd" checked>
+                <input type="radio" id="rd2" name="rd">
+
+                <div class="btn_box">
+                    <div class="mp">
+                        <label for="rd1" class="mp1">중분류01</label>
+                        <label for="rd2" class="mp2">중분류02</label>
+                    </div>
+                </div>
+
+                <div class="pan_box">
+                    <div class="pan middle1">
+                        <div class="pan_img">
+                            <img src="./img/반응형/iDeco/tab_1_1.jpg" class="pi1">
+                        </div>
+                        <div class="pan_menu">
+                            <div class="pm_div">
+                                <img src="./img/반응형/iDeco/tab_1_2.jpg" class="pm">
+                                <div class="sail_box">
+                                    50%
+                                </div>
+                            </div>
+                            <div class="pm_div">
+                                <img src="./img/반응형/iDeco/tab_1_3.jpg" class="pm">
+                                <div class="sail_box">
+                                    50%
+                                </div>
+                            </div><div class="pm_div">
+                                <img src="./img/반응형/iDeco/tab_1_4.jpg" class="pm">
+                                <div class="sail_box">
+                                    50%
+                                </div>
+                            </div><div class="pm_div">
+                                <img src="./img/반응형/iDeco/tab_1_5.jpg" class="pm">
+                                <div class="sail_box">
+                                    50%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pan middle2">
+                        <div class="pan_img">
+                            <img src="./img/반응형/iDeco/tab_2_1.jpg" class="pi1">
+                        </div>
+                        <div class="pan_menu">
+                            <div class="pm_div">
+                                <img src="./img/반응형/iDeco/tab_2_2.jpg" class="pm">
+                                <div class="sail_box">
+                                    50%
+                                </div>
+                            </div>
+                            <div class="pm_div">
+                                <img src="./img/반응형/iDeco/tab_2_3.jpg" class="pm">
+                                <div class="sail_box">
+                                    50%
+                                </div>
+                            </div>
+                            <div class="pm_div">
+                                <img src="./img/반응형/iDeco/tab_2_4.jpg" class="pm">
+                                <div class="sail_box">
+                                    50%
+                                </div>
+                            </div>
+                            <div class="pm_div">
+                                <img src="./img/반응형/iDeco/tab_2_5.jpg" class="pm">
+                                <div class="sail_box">
+                                    50%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+    <input type="radio" id="rd3">
+    <div class="layer_popup">
+        <div class="popup">
+            <div class="div_popa"> 
+                <div class="popi">
+                    <img src="./img/반응형/iDeco/popup1.png" class="poi poimg1">
+                    <img src="./img/반응형/iDeco/popup2.png" class="poi poimg2">
+                    <img src="./img/반응형/iDeco/popup3.png" class="poi poimg3">
+                    <img src="./img/반응형/iDeco/popup4.png" class="poi poimg4">
+                    <img src="./img/반응형/iDeco/popup5.png" class="poi poimg5">
+                    <img src="./img/반응형/iDeco/popup6.png" class="poi poimg6">
+                </div>  
+            </div>
+            <div class="div_popb">
+                <img src="./img/반응형/iDeco/popup1.png" class="poimg poimg1">
+                <img src="./img/반응형/iDeco/popup2.png" class="poimg poimg2">
+                <img src="./img/반응형/iDeco/popup3.png" class="poimg poimg3">
+                <img src="./img/반응형/iDeco/popup4.png" class="poimg poimg4">
+                <img src="./img/반응형/iDeco/popup5.png" class="poimg poimg5">
+                <img src="./img/반응형/iDeco/popup6.png" class="poimg poimg6">
+            </div>
+            <label for="rd3" class="btn_close">X</label>
+        </div>
+    </div>
+</body>
+</html>

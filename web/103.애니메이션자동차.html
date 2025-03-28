@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 0;}
+
+
+
+        .car {
+            width: 1250px;
+            height: 470px;
+            background: url(./img/car.png)no-repeat center;
+            
+            margin: 0 auto;
+
+            animation: moving 2s ease-in-out forwards infinite;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .wheel1 {
+            position: absolute;
+            left: 150px;
+            bottom: 5px;
+
+            animation: wheel_rolling 2s ease-out forwards infinite;
+        }
+
+        .wheel2 {
+            position: absolute;
+            right: 110px;
+            bottom: 5px;
+
+            animation: wheel_rolling 2s ease-out forwards infinite;
+        }
+
+
+/* transition: all 3s ease-out; */
+
+    @keyframes wheel_rolling {
+        0% {transform: rotatez(0deg);}
+        100% {transform: rotatez(-960deg);}
+    }
+
+    @keyframes moving {
+        0% {transform: translate(200%);}
+        100% {transform: translate(0);}
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="car">
+            <div class="wheel1">
+                <img src="./img/tire.png" alt="">
+            </div>
+            <div class="wheel2">
+                <img src="./img/tire.png" alt="">
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

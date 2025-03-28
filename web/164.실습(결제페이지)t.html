@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            height: 40px;
+        }
+        .btn_updown {
+            width: 40px;
+            height: 40px;
+            border-radius: 0;
+            border: 1px solid #767676;
+        }
+        #txt_qty {
+            width: 50px;
+            border: 1px solid #767676;
+            border-right: none;
+            border-left: none;
+            padding: 0 5px;
+            box-sizing: border-box;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+    <div class="box">
+        <input type="button" value="-" class="btn_updown" onclick="minus()">
+        <input type="text" value="0" id="txt_qty">
+        <input type="button" value="+" class="btn_updown" onclick="plus()">
+    </div>
+    <div>개당금액: <span id="s_price">10,000</span>원</div>
+    <hr>
+    <h3>최종금액: <span id="f_price">0</span> 원</h3>
+</div>
+
+<script>
+/*
+    개당 금액 10000원짜리 아이템 수량 바뀔때마다 최종금액 구하기
+    *주의
+
+*/
+    let s_price = +document.getElementById('s_price').innerText.replace(",","")  
+
+/*
+    1. qty 요소 잡기
+    2. 숫자로 형변환 & 저장
+    3. +1, -1
+    4. 결과 qty에 덮어쓰기
+*/
+    function plus() {
+        // document.getElementById('txt_qty').value = +document.getElementById('txt_qty').value + 1
+        let qty = document.getElementById('txt_qty');
+        qty.value = +qty.value + 1;
+
+        document.getElementById('f_price').innerText = (qty.value * s_price).toLocaleString('ko')
+        
+    }
+    
+    function minus() {
+        let qty = document.getElementById('txt_qty');
+
+        if(qty.value > 0) {
+            qty.value = +qty.value - 1;
+            document.getElementById('f_price').innerText = (qty.value * s_price).toLocaleString('ko')
+        }
+        else {
+            alert("최소 주문 수량은 1개 입니다.")
+        }
+    }
+    
+    
+
+</script>
+</body>
+</html>

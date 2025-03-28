@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        숫자 하나를 입력받고 그 수가 음수인지 양수인지 0인지 판별해 출력
+        
+        */
+
+        let num1 = +prompt("입력하시오")
+        let num2 = +prompt("입력하시오")
+
+        let total = num1 + num2
+
+        if (total > 0) {
+            console.log("양수")
+            document.write("양수")
+        }
+
+        else if (total < 0) {
+            console.log("음수")
+            document.write("음수")
+        }
+
+        else {
+            console.log("0")
+            document.write("0")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 0;}
+
+        ul {list-style: none;}
+        .wrap {
+            width: 500px;
+            height: 500px;
+            border: 1px solid;
+            background: pink;
+            position: relative;
+        }
+        .li {
+            width: 50%;
+            height: 50%;
+            border: 1px solid;
+            box-sizing: border-box;
+
+            float: left;
+        }
+        
+        /* .box1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            position: absolute;
+            left: 250px;
+            top: 0;
+            box-sizing: border-box;
+        }
+
+        .box3 {
+            position: absolute;
+            left: 250px;
+            top: 250px;
+            box-sizing: border-box;
+        }
+
+        .box4 {
+            position: absolute;
+            left: 0;
+            top: 250px;
+            box-sizing: border-box;
+        } */
+        
+        .divk {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            background-color: blue;
+        }
+
+        .box11 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box22 {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .box33 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .box44 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box1:hover .box11 {
+            display: none;
+        }
+
+        .box2:hover .box22 {
+            display: none;
+        }
+
+        .box3:hover .box33 {
+            display: none;
+        }
+
+        .box4:hover .box44 {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="divbox">
+            <li class="li box1">
+                <div class="divk box11"></div>
+            </li>
+            <li class="li box2">
+                <div class="divk box22"></div>
+            </li>
+            <li class="li box3">
+                <div class="divk box33"></div>
+            </li>
+            <li class="li box4">
+                <div class="divk box44"></div>
+            </li>
+        </div>
+    </div>
+</body>
+</html>

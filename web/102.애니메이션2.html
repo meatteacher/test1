@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pan {
+            width: 400px;
+            height: 900px;
+
+            position: relative;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+
+            border: 1px solid;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            box-sizing: border-box;
+
+            animation: bg_color 1s infinite, moving1 2s infinite;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+
+            border: 1px solid;
+
+            position: absolute;
+            left: 0;
+            top: 400px;
+
+            box-sizing: border-box;
+
+            animation: bg_color 1s infinite, moving2 2s infinite;
+        }
+
+        @keyframes bg_color {
+            from {background: red;}
+            50% {background: green;}
+            to {background: blue;}
+        }
+
+        @keyframes moving1 {
+            0% {transform: translate(0);}
+            20% {transform: translate(0);}
+            40% {transform: translate(300%);}
+            60% {transform: translate(300%);transform: translate(300%,300%);}
+            80% {transform: translate(300%);transform: translate(300%,300%);transform: translate(0,300%);}
+            100% {transform: translate(0);}
+        }
+
+        @keyframes moving2 {
+            0% {left: 0; top: 400px;}
+            12% {left: 200px; top: 400px;}
+            24% {left: 200px; top: 600px;}
+            36% {left: 0; top: 600px;}
+            48% {left: 0; top: 400px;}
+            60% {left: 200px; top: 600px;}
+            72% {left: 200px; top: 400px;}
+            84% {left: 0; top: 600px;}
+            100% {left: 0; top: 400px;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pan">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

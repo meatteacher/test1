@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/*
+    숫자 매번 입력 받아서 
+    최소 두자리 이상 숫자로 출력
+    -1 넣을때 브레이크
+*/
+
+let input = +prompt("숫자를 입력하시오")
+
+function number(input) {
+    if(input<10) {
+        input = "0" + input;
+    }
+    return input;
+}
+
+while(input != -1) {
+    console.log(number(input))
+    input = +prompt("숫자를 입력하시오");
+    if(input == -1) {
+        break;
+    }
+}
+
+console.log("끗")
+
+
+</script>
+</body>
+</html>

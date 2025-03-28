@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+            margin: 0 auto;
+            background: grey;
+        }
+
+        .item_list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item {
+            width: calc(100% / 4);
+            height: 300px;
+            border: 1px solid;
+            box-sizing: border-box;
+
+            font-size: 80px;
+            text-align: center;
+        }
+        .btn_showMore {
+            background: skyblue;
+            text-align: center;
+            line-height: 40px;
+
+        }
+        /* 적응형 - 특정 사이즈만 커버 */
+
+        @media screen and (max-width: 768px) and (orientation:portrait) {
+            body {
+            background: orange;
+            
+        }
+        .item {
+            width: calc(100% / 3);
+        }
+        }
+
+        @media screen and (max-width: 480px) and (orientation:portrait) {
+            body {
+            background: gray;
+        }
+        .item {
+            width: calc(100% / 2);
+        }
+        }
+</style>
+<body>
+    <ul class="item_list">
+    </ul>
+    <div class="btn_showMore" onclick="put_item()">더보기</div>
+<script>
+    function put_item() {
+            let itemList = document.getElementsByClassName('item_list')[0];
+
+            let itemCount = document.getElementsByClassName('item').length;
+
+            for(let i=itemCount; i<itemCount+4; i++) {
+                itemList.innerHTML += `<li class="item">${i}</li> `
+            }
+        }
+    /* 
+        더보기 버튼 누르면 4칸씩 추가되게 하기
+        0~1024 4칸씩
+        0~768 3칸씩
+        0~480 2칸씩 여러줄 나오게 하기
+    
+    */
+    
+</script>
+</body>
+</html>

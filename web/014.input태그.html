@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body {height: 5000px;}</style>
+</head>
+<body>
+<!-- 
+    input 태그 - 사용자로부터 입력을 받을수 있는 태그
+                inline-block레벨(카테고리상 inline레벨)
+                닫는태그 없음(기본 사이즈가 정해져 있음)
+
+        <input type="유형" 속성="속성값" 속성="속성값"....>
+
+        - 속성 - 
+        1) type: (필수)유형.
+
+        2) value: (옵션) 실제값
+                *필수처럼 사용하는 type: button
+                *checkbox나 radio 에서는 실제 화면에 나타나지 않고 정보를 넘길때 사용됨(form태그)
+                
+        3) name: (옵션)요소에 이름 달아줄때 사용
+                 요소들을 그룹핑 할때 사용
+                *필수처럼 사용하는 type: radio
+
+--> 
+
+    <p>== 많이 사용 ==</p>
+    <input type="text" value="abcd"> <br>
+    <input type="password" value="1234"> <br>
+    <input type="button" value="버튼1"> 
+    <input type="button" value="로그인"> 
+    <input type="button" value="회원가입">  <br>
+
+    <button>확인</button>
+    <!-- input type="button" 과 같지만 닫는태그가 있음
+        form태그 밖에서 명시되면 그냥 type="button" 으로 인식하고
+        form태그 안에서 명시되면 type="submit" 으로 인식됨 -->
+    <br>
+    <!-- 라디오 버튼은 한번 체크가 되면 사용자가 체크 해제를 할 수 없다.
+        (유일하게 해제 할 수 있는 방법은 같은 그룹중에 다른거 체크해야함) -->
+    <input type="radio" value="예" name="rd">예 
+    <input type="radio" value="아니오" name="rd">아니오 <br>
+    
+    <input type="checkbox" value="웹1" name="chk">웹1
+    <input type="checkbox" value="웹2" name="chk">웹2
+    <input type="checkbox" value="웹3" name="chk">웹3 <br>
+    
+
+    <hr>
+
+    <input type="radio" value="강남" name="rd2" id="rd_강남">
+    <label for="rd_강남">강남점</label>
+
+    <label for="rd_당산">
+        <input type="radio" value="당산" name="rd2" id="rd_당산">
+        당산점
+    </label> 
+
+    <hr>
+    <!-- <textarea name="" id=""></textarea> -->
+
+    <form action="#"> 
+        <input type="radio" value="예" name="rd">예 
+        <input type="radio" value="아니오" name="rd">아니오 <br>
+        
+        <input type="checkbox" name="chk1">웹1
+        <input type="checkbox" name="chk2">웹2
+        <input type="checkbox" name="chk3">웹3 <br>
+        
+        <input type="checkbox" name="tmp" value="tmp1">웹1
+        <input type="checkbox" name="tmp" value="tmp2">웹2
+        <input type="checkbox" name="tmp" value="tmp3">웹3 <br>
+
+        <input type="email"><br>
+
+        <input type="submit">
+        <input type="reset">
+    </form>  
+
+    <hr>
+    <p>== 중간빈도 ==</p>
+    <input type="submit" value="확인"> <br>
+    <input type="reset"> <br>
+    <!-- submit, reset 은 form 태그 안에서만 사용 가능
+            (type="button"과 같은거임)
+     submit은 정보를 넘김
+     reset은 input 요소들을 초기화함 -->
+    
+    <input type="hidden"> <!-- text와 동일하지만 화면에 출력 안됨 --> <br>
+    <input type="search"> <!-- text와 동일하지만 글자 입력시 X 표시 나옴 --> <br>
+    <input type="file"> <!-- 파일 업로드시 사용 --> <br>
+    <input type="range"> <br>
+    
+    <hr>
+    <input type="number"> <br>
+    <input type="tel"> <!-- 웹페이지에서는 일반 text 필드처럼 나타나지만 스마트기기에서는 숫자패드로 나옴 --> <br>
+    <input type="email"> <!-- form태그 안에서만 동작. 필드에 @ 있어야만 통과 --> <br>
+    <input type="date"> <br>
+    <input type="datetime-local"> <br>
+</body>
+</html>

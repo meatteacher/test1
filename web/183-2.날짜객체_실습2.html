@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="clock"></div>
+    <input type="button" id="btn" value="24시간제로 변경" onclick="timer12()">
+
+
+<script>
+    function timer12() {
+        console.log("timer12 입니다.")
+        document.getElementById('btn').setAttribute('onclick', 'timer24()')
+
+    }
+    function timer24() {
+        console.log("timer24 입니다.")
+        document.getElementById('btn').setAttribute('onclick', 'timer12()')
+    }
+    
+</script>
+</body>
+</html>
