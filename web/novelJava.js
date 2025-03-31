@@ -208,7 +208,7 @@ var swiper1 = new Swiper(".swiper1", {
 
 let sec5 = document.getElementsByClassName('swiper-wrapper')[5];
 
-for(let i=0; i<3; i++) {
+for(let i=0; i<4; i++) {
   sec5.innerHTML += `
     <div class="swiper-slide">
     <a href="01.article_page.html?itemNo=${NOVEL_LIST[i].item_no}">
@@ -222,6 +222,53 @@ for(let i=0; i<3; i++) {
             <div class="count2">
                 <img src="../port/count.png" alt="count">
                 <div class="count">${NOVEL_LIST[i].bookCount}</div>
+            </div>
+        </div>
+    </a>
+    </div>
+  `;
+}
+
+
+let sec6 = document.getElementsByClassName('swiper-wrapper')[6];
+
+for(let i=0; i<AlterHistory_List.length; i++) {
+  sec6.innerHTML += `
+    <div class="swiper-slide">
+    <a href="01.article_page.html?itemNo=${AlterHistory_List[i].item_no}">
+        <div class="cover">
+            <img src="../port/pyoji/${AlterHistory_List[i].src}" alt="${AlterHistory_List[i].src}">
+        </div>
+        <div class="slide_text2">
+            <div class="tag">${AlterHistory_List[i].tag}</div>
+            <span class="slide_title2">${AlterHistory_List[i].title}</span>
+            <div class="artist2">${AlterHistory_List[i].artist}</div>
+            <div class="count2">
+                <img src="../port/count.png" alt="count">
+                <div class="count">${AlterHistory_List[i].bookCount}</div>
+            </div>
+        </div>
+    </a>
+    </div>
+  `;
+}
+
+let sec7 = document.getElementsByClassName('swiper-wrapper')[7];
+
+for(let i=0; i<Life_List.length; i++) {
+  sec7.innerHTML += `
+    <div class="swiper-slide">
+    <a href="01.article_page.html?itemNo=${Life_List[i].item_no}">
+        <div class="cover">
+            <img src="../port/pyoji/${Life_List[i].src}" alt="${Life_List[i].src}">
+        </div>
+        <div class="slide_text2">
+            <div class="tag">${Life_List[i].tag}</div>
+            <span class="slide_title2">${Life_List[i].title}</span>
+            <div class="artist2">${Life_List[i].artist}</div>
+            <div class="count2">
+                <img src="../port/count.png" alt="count">
+                <div class="count">${Life_List[i].bookCount}</div>
             </div>
         </div>
     </a>
